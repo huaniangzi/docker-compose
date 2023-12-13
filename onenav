@@ -1,0 +1,11 @@
+version: '3'
+services:
+  onenav:
+    container_name: onenav #容器名称
+    ports:
+      - "2010:80"    #3080是默认端口，可以自定义,注意记得开端口
+    volumes:
+      - /home/docker/onenav/data:/data/wwwroot/default/data'  #默认目录映射无需更改
+    image: 'helloz/onenav'   #镜像名称
+    restart:
+      always
