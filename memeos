@@ -1,0 +1,11 @@
+version: "3"
+services:
+  memos:
+    image: neosmemo/memos:latest
+    container_name: memeos
+    hostname: memeos
+    ports:
+      - "2007:5230"
+    volumes:
+      - /home/docker/memos/.memos/:/var/opt/memos
+    restart: always
